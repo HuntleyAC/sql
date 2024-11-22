@@ -41,29 +41,28 @@ CREATE TABLE Shippers (
 );
 
 INSERT INTO Customers (CustomerID, CustomerName) VALUES
-(1, 'Customer A'),
-(2, 'Customer B'),
-(3, 'Customer C');
+(1, 'Arseniy'),
+(2, 'Ivan'),
+(3, 'Bulat');
 
 INSERT INTO Employees (EmployeeID, EmployeeName, HireDate) VALUES
-(1, 'Employee X', '2020-01-01'),
-(2, 'Employee Y', '2019-06-15');
+(1, 'Catsh', '2024-01-01'),
+(2, 'OPL', '2024-06-15');
 
 INSERT INTO Categories (CategoryID, CategoryName) VALUES
-(1, 'Electronics'),
-(2, 'Clothing'),
+(1, 'Tech'),
+(2, 'Car'),
 (3, 'Books');
 
 INSERT INTO Products (ProductID, ProductName, CategoryID, UnitPrice) VALUES
-(1, 'Laptop', 1, 1000.00),
-(2, 'T-Shirt', 2, 20.00),
-(3, 'Novel', 3, 15.00);
+(1, 'Logitech g pro', 1, 1000.00),
+(2, 'Glass', 2, 20.00),
+(3, 'D. Trump', 3, 15.00);
 
--- Вставка данных в таблицу Orders
 INSERT INTO Orders (OrderID, CustomerID, EmployeeID, OrderDate) VALUES
-(1, 1, 1, '2023-01-15'),
-(2, 2, 2, '2023-01-20'),
-(3, 3, 1, '2023-01-25');
+(1, 1, 1, '2024-01-15'),
+(2, 2, 2, '2024-01-20'),
+(3, 3, 1, '2024-01-25');
 
 INSERT INTO OrderDetails (OrderDetailID, OrderID, ProductID, Quantity, UnitPrice) VALUES
 (1, 1, 1, 2, 1000.00),
@@ -73,8 +72,8 @@ INSERT INTO OrderDetails (OrderDetailID, OrderID, ProductID, Quantity, UnitPrice
 (5, 3, 2, 10, 20.00);
 
 INSERT INTO Shippers (ShipperID, ShipperName) VALUES
-(1, 'DHL'),
-(2, 'FedEx');
+(1, 'Technodom'),
+(2, 'H&M');
 SELECT 
     C.CategoryName, 
     SUM(OD.Quantity * OD.UnitPrice) AS TotalRevenue
